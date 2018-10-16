@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+sudo apt-get install default-jdk
+curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.4.2.tar.gz
+tar -xvf elasticsearch-6.4.2.tar.gz
+
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update
+sudo apt-get install python3.6
