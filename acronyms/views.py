@@ -65,7 +65,7 @@ class AcronymView(generics.ListAPIView):
         if "search_query" in request.GET:
             query = str(request.GET.get("search_query"))
 
-            s = Search(index="acronyms").query("match", definition=query)
+            s = Search(index="acronyms").query("match", acronym=query)
             response = s.execute()
 
             logging.debug(response)
